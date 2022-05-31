@@ -13,7 +13,7 @@ for (let ingredient of ingredients) {
   ingredientsEl.textContent = [ingredient];
   console.log(ingredientsEl);
 
-  const ulEl = document.querySelector('#ingredients');
+  const itemEl = document.querySelector('#ingredients');
 
-  ulEl.appendChild(ingredientsEl);
+  itemEl.appendChild(ingredientsEl);
 }
