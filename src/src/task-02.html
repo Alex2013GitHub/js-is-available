@@ -7,19 +7,49 @@
     <title>Task 2</title>
     <link rel="stylesheet" href="css/common.css" />
     <style>
-      .item {
+      /* .item {
         font-weight: 500;
       }
 
       .item:not(:last-child) {
         margin-bottom: 8px;
+      } */
+
+      .container {
+        display: flex;
+        margin: 100px 50px 50px 50px;
+      }
+      .content {
+        width: 155px;
+        border: 1px solid black;
+        margin: 0 auto;
+      }
+      .item {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        display: inline-block;
+        font-size: 25px;
+        border: 1px solid black;
+        cursor: pointer;
+        vertical-align: middle;
+        transition: background 0.1s;
+      }
+      .item:hover {
+        background-color: #f1f1f10c;
       }
     </style>
   </head>
   <body>
-    <p><a href="index.html">Go back</a></p>
+    <!-- <p><a href="index.html">Go back</a></p>
 
-    <ul id="ingredients"></ul>
+    <ul id="ingredients"></ul> -->
+    <h1 class="js-winner"></h1>
+
+    <div class="container">
+      <div class="js-content content"></div>
+    </div>
 
     <script src="js/task-02.js" type="module"></script>
   </body>
