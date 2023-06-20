@@ -33,20 +33,20 @@
 // =================================
 
 const container = document.querySelector('.js-content');
-const nameWinner = document.querySelector('.js-winner');
-let player = 'X';
-let historyX = [];
-let historyO = [];
-const wins = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-  [1, 4, 7],
-  [2, 5, 8],
-  [3, 6, 9],
-  [1, 5, 9],
-  [3, 5, 7],
-];
+// const nameWinner = document.querySelector('.js-winner');
+// let player = 'X';
+// let historyX = [];
+// let historyO = [];
+// const wins = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+//   [1, 4, 7],
+//   [2, 5, 8],
+//   [3, 6, 9],
+//   [1, 5, 9],
+//   [3, 5, 7],
+// ];
 
 function createMarkup() {
   let markup = '';
@@ -57,47 +57,49 @@ function createMarkup() {
 }
 createMarkup();
 
-container.addEventListener('click', onClick);
+// container.addEventListener('click', onClick);
 
-function onClick(evt) {
-  const { target } = evt;
-  if (!target.classList.contains('js-item') || target.textContent) {
-    return;
-  }
+// function onClick(evt) {
+//   const { target } = evt;
+//   if (!target.classList.contains('js-item') || target.textContent) {
+//     return;
+//   }
 
-  const isEndGame = historyO.length + historyX.length === 9;
-  const id = Number(target.dataset.id);
-  let result = false;
-  if (player === 'X') {
-    historyX.push(id);
-    result = isWinner(historyX);
-  } else {
-    historyO.push(id);
-    result = isWinner(historyO);
-  }
-  target.textContent = player;
+//   const isEndGame = historyO.length + historyX.length === 9;
+//   const id = Number(target.dataset.id);
+//   let result = false;
+//   if (player === 'X') {
+//     historyX.push(id);
+//     result = isWinner(historyX);
+//   } else {
+//     historyO.push(id);
+//     result = isWinner(historyO);
+//   }
+//   target.textContent = player;
 
-  if (result) {
-    nameWinner.textContent = `Winner ${player} 😎`;
-    setTimeout(() => {
-      resetGame();
-    }, 1500);
-    return;
-  } else if (isEndGame) {
-    nameWinner.textContent = `Try again 😱`;
-    resetGame();
-    return;
-  }
-  player = player === 'X' ? 'O' : 'X';
-}
+//   if (result) {
+//     nameWinner.textContent = `Winner ${player} 😎`;
+//     setTimeout(() => {
+//       resetGame();
+//     }, 1500);
+//     return;
+//   } else if (isEndGame) {
+//     nameWinner.textContent = `Try again 😱`;
+//     resetGame();
+//     return;
+//   }
+//   player = player === 'X' ? 'O' : 'X';
+//   console.log(evt.currentTarget);
+//   console.log(evt.target);
+// }
 
-function isWinner(arr) {
-  return wins.some(item => item.every(id => arr.includes(id)));
-}
+// function isWinner(arr) {
+//   return wins.some(item => item.every(id => arr.includes(id)));
+// }
 
-function resetGame() {
-  createMarkup();
-  historyX = [];
-  historyO = [];
-  player = 'X';
-}
+// function resetGame() {
+//   createMarkup();
+//   historyX = [];
+//   historyO = [];
+//   player = 'X';
+// }
