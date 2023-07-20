@@ -4,6 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        margin: 100px 50px 50px 50px;
+      }
+
+      .content {
+        width: 156px;
+        border: 1px solid black;
+        margin: 0 auto;
+      }
+
+      .item {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        display: inline-block;
+        font-size: 25px;
+        border: 1px solid black;
+        cursor: pointer;
+        vertical-align: middle;
+        transition: background 0.1s;
+      }
+
+      .item:hover {
+        background-color: #f1f1f10c;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        padding: 30px;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+    />
   </head>
-  <body></body>
+  <body class="container">
+    <div><div class="content"></div></div>
+    <script src="js/07_02.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+    <!-- Практика -->
+    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+  </body>
 </html>
